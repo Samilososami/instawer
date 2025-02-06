@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile Viewer</title>
+</head>
+<body>
+    <h2>Obtener foto de perfil de Instagram</h2>
+    <form action="/" method="POST">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if profile_pic %}
+        <h3>Foto de perfil de {{ username }}</h3>
+        <img src="{{ profile_pic }}" alt="Foto de perfil" width="200">
+    {% endif %}
+</body>
+</html>
